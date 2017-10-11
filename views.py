@@ -13,17 +13,8 @@ from .music_maker import music_maker
 
 # Create your views here.
 def index(request):
-    # python_cmd = 'python2'
-    python_cmd = 'C:\\Python27\\python.exe'
 
-    script = BASE_DIR + '/data_music/music_maker/music_maker.py'
-
-    print(python_cmd)
-    print(call([python_cmd, script ]))
-    with open(BASE_DIR + '/data_music/music_maker/test.midi', 'rb') as midi_file:
-        encoded_file = base64.b64encode(midi_file.read())
-
-    return HttpResponse(encoded_file)
+    return HttpResponse("Data Music")
 
 @csrf_exempt
 def neighborhood_music(request):
